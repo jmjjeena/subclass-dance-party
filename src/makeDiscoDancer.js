@@ -1,5 +1,5 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  //<iframe src="https://giphy.com/embed/yNrt7PROGv2uwDPE7W" width="440" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sandiegozoo-dance-dizzy-ostrich-yNrt7PROGv2uwDPE7W">via GIPHY</a></p>
+var makeDiscoDancer = function(top, left, timeBetweenSteps) {
+  //<iframe src="https://giphy.com/embed/nxIpDhEK5xS8M" width="480" height="215" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/baby-minions-loves-nxIpDhEK5xS8M">via GIPHY</a></p>
   makeDancer.call(this,top, left, timeBetweenSteps);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -18,5 +18,5 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 };
 
 
-makeBlinkyDancer.prototype=Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor=makeBlinkyDancer;
+makeDiscoDancer.prototype=Object.create(makeDancer.prototype);
+makeDiscoDancer.prototype.constructor=makeDiscoDancer;
