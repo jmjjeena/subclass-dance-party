@@ -39,7 +39,7 @@ $(document).ready(function() {
         $('body').append(dancers[i].$node);
       } 
     };
-    
+    console.log("test");
   });
 });
 
