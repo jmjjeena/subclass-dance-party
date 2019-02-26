@@ -19,15 +19,27 @@ $(document).ready(function() {
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
+    var left;
+    if(dancerMakerFunctionName === 'discoDancer' || dancerMakerFunctionName === 'danceParty'){
+        left= ($( "img.disco" ).size())*175;
+    }else{
+      left=$("body").width() * Math.random();
+    }
     // make a dancer with a random position
-
-    var dancer = new dancerMakerFunction(
+    if(dancerMakerFunctionName !== 'danceParty'){
+      var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      left,
       Math.random() * 1000
-    );
-    $('body').append(dancer.$node);
+      );
+      $('body').append(dancer.$node);
+    }else{
+      var dancers = dancerMakerFunction(0,0,0);
+      for(var i=0;i<dancers.length;i++){
+        $('body').append(dancers[i].$node);
+      } 
+    };
+    
   });
 });
 

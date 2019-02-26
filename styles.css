@@ -4,6 +4,7 @@
 */
 body, html{
   height:100%;
+  width: 100%;
 }
 body{
   margin: 0px;
@@ -15,16 +16,18 @@ body{
 @-webkit-keyframes pulse{
     100%{
       background: url(lib/media/DiscoTeca.jpg);
-      background-size: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     0%{
       background: url(lib/media/DiscoTecaFlipped.jpg);
-      background-size: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #ce2c56fa;
 }
 
 /*
@@ -40,9 +43,11 @@ body, a:link, a:visited, a:active{
   background: red;
 }
 .title{
-  background-color:blue;
+  background-color:black;
 }
-
+.ballerinaButton{
+  font-family: cursive;
+}
 
 
 /*
@@ -51,15 +56,21 @@ body, a:link, a:visited, a:active{
 
 
 .dancer{
-  size: 50px;
-  border:10px solid red;
-  border-radius:10px;
+  width: 175px;
+  height: auto;
   position:absolute;
 /*  background-image: url(lib/media/spiderman.jpeg);
 */}
 
-#Spiderman {
-  background-image: url(lib/media/spiderman.jpeg);
+img.dancer {
+  width: 175px;
+  height: auto;
+  position:absolute;
+}
+
+img.disco{
+  height 400px;
+  /*background-color: rgba(255,50,0,0.5);*/
 }
 
 
