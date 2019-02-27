@@ -33,13 +33,31 @@ $(document).ready(function() {
       Math.random() * 1000
       );
       $('body').append(dancer.$node);
+      window.dancers.push([dancerMakerFunctionName,dancer]);
     }else{
       var dancers = dancerMakerFunction(0,0,0);
       for(var i=0;i<dancers.length;i++){
         $('body').append(dancers[i].$node);
+        window.dancers.push([dancerMakerFunctionName,dancers[i]]);
       } 
     };
-    console.log("test");
+  });
+    
+  $('.addLineUpButton').on('click', function(event) {
+    var getLinedUp = $(this).data('lineup-maker-function-name');
+
+    // get the maker function for the kind of dancer we're supposed to make
+    var lineUpFunction = window[getLinedUp];
+    lineUpFunction();
+    
+  });
+  $('.addResetButton').on('click', function(event) {
+    var reset = $(this).data('reset-maker-function-name');
+
+    // get the maker function for the kind of dancer we're supposed to make
+    var resetFxn = window[reset];
+    resetFxn();
+    
   });
 });
 

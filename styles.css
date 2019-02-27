@@ -5,6 +5,11 @@
 body, html{
   height:100%;
   width: 100%;
+  margin: 0;
+  padding:0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
 }
 body{
   margin: 0px;
@@ -45,6 +50,7 @@ body, a:link, a:visited, a:active{
 .title{
   background-color:black;
 }
+
 .ballerinaButton{
   font-family: cursive;
 }
@@ -59,6 +65,7 @@ body, a:link, a:visited, a:active{
   width: 175px;
   height: auto;
   position:absolute;
+  display: inline;
 /*  background-image: url(lib/media/spiderman.jpeg);
 */}
 
@@ -73,5 +80,18 @@ img.disco{
   /*background-color: rgba(255,50,0,0.5);*/
 }
 
+/*Responsive*/
 
+@media only screen and (max-width: 430px) {
+  .title, .addDancerButton,
+  .topbar, .title,
+  .ballerinaButton {
+    min min-height: 48px;
+  }
 
+  body {
+  font-size: 1em;
+  margin: auto;
+  min-width: 300px;
+  }
+}
