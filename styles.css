@@ -55,6 +55,10 @@ body, a:link, a:visited, a:active{
   font-family: cursive;
 }
 
+.ballerina:hover {
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+}
 
 /*
   Dancers

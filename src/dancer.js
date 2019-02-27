@@ -18,6 +18,7 @@ makeDancer.prototype.step = function() {
     // it just schedules the next step
     var timeOut=setTimeout(this.step.bind(this), this.timeBetweenSteps);
     timeOut;
+    collissionRunner();
     this.timeOut;
 };
 
